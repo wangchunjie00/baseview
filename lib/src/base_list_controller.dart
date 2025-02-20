@@ -3,7 +3,7 @@ import 'package:baseview/baseview.dart';
  *  列表控制器
  * */
 
-abstract class BaseListController extends BaseController
+abstract class BaseListController extends BaseCommonController
     with AbstractListNetWork {
   /// 定义页码方便子控制器使用
   int page = 1;
@@ -11,12 +11,6 @@ abstract class BaseListController extends BaseController
   /// 刷新控制器
   RefreshController refreshController =
       RefreshController(initialRefresh: false);
-
-
-  @override
-  void onHidden() {
-    // TODO: implement onHidden
-  }
   
   /// 上拉加载
   @override

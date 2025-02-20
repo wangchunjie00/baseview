@@ -46,6 +46,4 @@ class mineController extends BaseListController {
     // TODO: implement getnetworkdata
   }
   
- 
-  
-  }
+}

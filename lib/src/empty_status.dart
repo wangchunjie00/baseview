@@ -14,6 +14,9 @@ class EmptyStatusWidget extends StatefulWidget {
   final double? paddingTop;
   final double? width;
   final double? height;
+  final String? failImage;
+  final String? emptyImage;
+
   const EmptyStatusWidget({
     Key? key,
     this.message,
@@ -24,6 +27,9 @@ class EmptyStatusWidget extends StatefulWidget {
     required this.emptyType,
     this.width,
     this.height,
+     this.failImage,
+     this.emptyImage
+
   }) : super(key: key);
 
   @override
@@ -63,9 +69,9 @@ class _EmptyStatusWidgetState extends State<EmptyStatusWidget> {
   /// 获取图片名称
   Widget _getImageWidget() {
     if (widget.emptyType == EmptyStatusType.fail) {
-      return Image.asset('assets/images/icon_image_fail.png');
+      return Image.asset(widget.failImage ?? '');
     } else {
-      return Image.asset('assets/images/image_empty.webp');
+      return Image.asset(widget.emptyImage ?? '');
     }
   }
 

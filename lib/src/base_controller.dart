@@ -40,6 +40,11 @@ abstract class BaseController extends SuperController  {
   }
 
   @override
+  void onHidden() {
+    // TODO: implement onHidden
+  }
+
+  @override
   void onDetached() {
     debugPrint("a11111");
   }
@@ -66,8 +71,6 @@ abstract class BaseController extends SuperController  {
     //彻底恢复回调
     debugPrint("a11114");
   }
-
-  
 
   void initData();
 }
